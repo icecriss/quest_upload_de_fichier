@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+
+  if typeof msg != 'undefined'
+    p= msg
+
+
+  form(method='POST' action="monupload" enctype="multipart/form-data")
+    label(for='myfile') File:
+    input(type='file', name='myfile' multiple)
+
+    button.btn.btn-primary(type='submit') Submit
+  
+  //- if typeof imgUrl != 'undefined'
+  //-   img(src=imgUrl)
+  

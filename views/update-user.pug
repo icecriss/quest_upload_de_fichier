@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .main.container
+    h1 Let's update #{user}'s file
+    p We're only gonna change the username.
+    form(method='POST' action="?_method=PUT")
+      div.form-group
+        label(for='name') Change Name:
+        input#name.form-control(type='text', placeholder='username' name='name')
+
+      button.btn.btn-primary(type='submit') UPDATE

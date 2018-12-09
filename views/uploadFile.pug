@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .main.container
+    h1 Let's upload a file
+    form(method='POST' enctype="multipart/form-data" action="/monupload")
+      div.form-group
+        label(for='myFile') Upload a file:
+        input(type='file', name='myFile', accept='png')
+
+      button.btn.btn-primary(type='submit') UPLOAD

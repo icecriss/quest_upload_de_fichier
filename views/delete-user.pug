@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .main.container
+    h1 Delete Form
+    p If you're sure you want to delete the user with the id #{deleted_userId}, click the button DELETE
+    p But be aware there will be no going back.
+    form(method='POST' action="?_method=DELETE")
+      div.form-group
+      button.btn.btn-primary(type='submit') DELETE
